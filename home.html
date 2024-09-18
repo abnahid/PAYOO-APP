@@ -27,12 +27,13 @@
                 <div class="divider"></div>
 
                 <!-- User Action Button -->
-                <button class="btn btn-lg">Add Money</button>
-                <button class="btn btn-lg">Cash Out</button>
+                <button id="btn-show-add-money" class="btn btn-lg">Add Money</button>
+                <button id="btn-show-cash-out" class="btn btn-lg">Cash Out</button>
+
 
                 <div class="divider"></div>
                 <!-- Add Money Form -->
-                <div id="add-money-form" class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl hidden">
+                <div id="add-money-form" class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl ">
                     <form class="card-body">
                         <div class="form-control">
                             <label class="label">
@@ -55,7 +56,7 @@
                 </div>
 
                 <!-- Cash Out Start -->
-                <div id="add-money-form" class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl ">
+                <div id="cash-out-form" class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl hidden">
                     <form class="card-body">
                         <div class="form-control">
                             <label class="label">
@@ -72,7 +73,7 @@
                                 class="input input-bordered" autocomplete="off" required />
                         </div>
                         <div class="form-control mt-6">
-                            <button id="btn-cash-out" class="btn btn-primary">Add Money</button>
+                            <button id="btn-cash-out" class="btn btn-primary">Cash Out</button>
                         </div>
                     </form>
                 </div>
@@ -82,6 +83,7 @@
 
     <script src="js/home.js"></script>
     <script src="js/cashout.js"></script>
+    <script src="js/features.js"></script>
 </body>
 
 </html>
