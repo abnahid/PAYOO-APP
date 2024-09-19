@@ -9,39 +9,52 @@
   <!-- Cdn -->
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <!-- Font Style -->
+  <style>
+    * {
+      font-family: "Outfit", sans-serif;
+    }
+  </style>
+
 </head>
 
 <body>
-  <main class="flex justify-center items-center mt-7">
-    <div class="mockup-phone">
+  <main class="flex justify-center items-center">
+    <div class=" mockup-phone">
       <div class="camera"></div>
-      <div class="display">
+      <div class="display bg-white">
         <div class="artboard artboard-demo phone-3">
-
+          <div class="flex justify-center items-center rounded-full drop-shadow-md ">
+            <img src="payoo.png" alt="" class="size-36 p-3">
+          </div>
           <!-- Login Section -->
-          <div class="hero bg-base-200 min-h-screen">
+          <div class="hero">
             <div class="hero-content flex-col">
               <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                 <form class="card-body">
                   <div class="form-control">
                     <label class="label">
-                      <span class="label-text">Mobile Number</span>
+                      <span class="label-text font-medium">Mobile Number</span>
                     </label>
-                    <input id="phone-number" type="number" placeholder="Enter your number" class="input input-bordered"
-                      required />
+                    <input id="phone-number" type="number" placeholder="Enter your number"
+                      class="input input-bordered rounded-full bg-[#F4F5F7]" required />
                   </div>
                   <div class="form-control">
                     <label class="label">
-                      <span class="label-text">4 Digit Pin</span>
+                      <span class="label-text font-medium">4 Digit Pin</span>
                     </label>
-                    <input id="pin-number" type="password" placeholder="Enter 4 Digit Pin" class="input input-bordered"
-                      required />
+                    <input id="pin-number" type="password" placeholder="Enter 4 Digit Pin"
+                      class="input input-bordered rounded-full bg-[#F4F5F7]" required />
                     <label class="label">
                       <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
                     </label>
                   </div>
-                  <div class="form-control mt-6">
-                    <button id="button-login" class="btn btn-primary">
+                  <div class="form-control">
+                    <button id="button-login" class="btn btn-primary rounded-full font-semibold">
                       Login
                     </button>
                   </div>

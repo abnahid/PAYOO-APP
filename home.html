@@ -9,26 +9,48 @@
     <!-- Cdn -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Font Style -->
+    <style>
+        * {
+            font-family: "Outfit", sans-serif;
+        }
+    </style>
+
 </head>
 
-<body>
+<body class="flex justify-center items-center">
     <div class="mockup-phone">
         <div class="camera"></div>
-        <div class="display">
+        <div class="displa">
             <div class="artboard artboard-demo phone-3">
 
                 <!-- Available Balance -->
-                <div class="stats shadow">
-                    <div class="stat">
-                        <div id="account-balance" class="stat-value">9000</div>
-                        <div class="stat-desc">Available Balance</div>
+                <div class="space-x-12 flex justify-between items-center">
+                    <div class="stats">
+                        <div class="flex items-center">
+                            <img src="payoo.png" alt="" class="size-16">
+                        </div>
+                        <div class="stat">
+                            <div id="account-balance" class="stat-value">9000</div>
+                            <div class="stat-desc">Available Balance</div>
+                        </div>
                     </div>
+
+                    <button class="btn btn-outline">Default</button>
                 </div>
+
                 <div class="divider"></div>
 
                 <!-- User Action Button -->
-                <button id="btn-show-add-money" class="btn btn-lg">Add Money</button>
-                <button id="btn-show-cash-out" class="btn btn-lg">Cash Out</button>
+                <div>
+                    <button id="btn-show-add-money" class="btn btn-lg">Add Money</button>
+                    <button id="btn-show-cash-out" class="btn btn-lg">Cash Out</button>
+                </div>
+
 
 
                 <div class="divider"></div>
