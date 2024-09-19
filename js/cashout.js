@@ -11,19 +11,15 @@ document
     // Verify Pin Number (In practice, this should be more secure)
     const correctPin = "1234";
     if (cashOutPinInput === correctPin) {
-      // Get the current balance (as a string from innerText)
       const balance = document.getElementById("account-balance").innerText;
 
-      // Convert balance and cashOutInput to numbers using parseFloat()
       const balanceNumber = parseFloat(balance);
       const cashOutNumber = parseFloat(cashOutInput);
 
       // Check if both balance and input are valid numbers
       if (!isNaN(balanceNumber) && !isNaN(cashOutNumber)) {
-        // Calculate the new balance
         const newBalance = balanceNumber - cashOutNumber;
 
-        // Update the account balance in the DOM
         document.getElementById("account-balance").innerText =
           newBalance.toFixed(2);
       } else {

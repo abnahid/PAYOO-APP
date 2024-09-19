@@ -15,7 +15,7 @@ document
     const pinNumber = document.getElementById("pin-number").value;
 
     // bad Way To Find valid Data
-    if (phoneNumber === "5" && pinNumber === "1234") {
+    if (phoneNumber === "235689" && pinNumber === "1234") {
       window.location.href = "/home.html";
     } else {
       console.log("Something wrong");

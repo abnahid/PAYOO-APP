@@ -9,6 +9,10 @@
     <!-- Cdn -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font-awesome -->
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css" type="text/css">
+
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,54 +26,94 @@
 
 </head>
 
-<body class="flex justify-center items-center">
+<body class="flex pt-4 md:pt-24  items-center justify-center">
     <div class="mockup-phone">
         <div class="camera"></div>
         <div class="display">
-            <div class="artboard artboard-demo phone-3">
+            <div class="artboard artboard-demo phone-3 bg-white items-start justify-start">
 
                 <!-- Available Balance -->
-                <div class="space-x-12 flex justify-between items-center">
-                    <div class="stats">
-                        <div class="flex items-center">
-                            <img src="payoo.png" alt="" class="size-16">
+                <div class=" mt-8 w-11/12 mx-auto flex items-center justify-between    ">
+                    <div class="flex items-center gap-2">
+                        <img class="w-14" src="payoo.png" alt="">
+                        <div>
+                            <h3 class=" font-bold text-xl">$
+                                <span id="account-balance">45000</span>
+                            </h3>
+                            <p class=" text-sm">Available Balance</p>
                         </div>
-                        <div class="stat">
-                            <div id="account-balance" class="stat-value">9000</div>
-                            <div class="stat-desc">Available Balance</div>
-                        </div>
+
+                    </div>
+                    <div>
+                        <h1 id="log-out"
+                            class="  rounded-lg border-gray-300 px-2 h-fit p-1 btn-ghost cursor-pointer  flex gap-2">
+                            <span><i class="fa-solid fa-arrow-right-to-bracket rotate-180"></i></span>
+                            logout
+                        </h1>
                     </div>
 
-                    <button class="btn btn-outline">Default</button>
                 </div>
 
                 <div class="divider"></div>
+
+                <!-- Welcome Section -->
+                <div class="p-4 text-center">
+                    <h2 class="text-xl font-bold text-orange-600">🔥 Welcome to Payooo!</h2>
+                    <p class="text-gray-500">Enjoy easy and convenient financial services with us.<br>Cashout charge is
+                        low and</p>
+                </div>
 
                 <!-- User Action Button -->
-                <div>
-                    <button id="btn-show-add-money" class="btn btn-lg">Add Money</button>
-                    <button id="btn-show-cash-out" class="btn btn-lg">Cash Out</button>
+                <div class="grid grid-cols-3 gap-4 px-4 py-4">
+                    <button class="btn btn-lg flex flex-col gap-0.5 items-center px-5 py-2 font-normal text-sm"
+                        id="btn-show-add-money">
+                        <i class="fa-solid fa-rectangle-history-circle-plus size-4"></i>
+                        Add Money
+                    </button>
+                    <button class="btn btn-lg flex flex-col items-center px-5 py-2 text-sm gap-0.5 font-normal"
+                        id="btn-show-cash-out">
+                        <i class="fa-solid fa-paper-plane size-4"></i>
+                        Cashout
+                    </button>
+                    <button id="btn-show-transfer-money"
+                        class="btn btn-lg flex flex-row gap-0.5 items-center px-5 py-2 text-sm font-normal">
+                        <i class="fa-solid fa-money-bill-transfer"></i>
+                        Transfer Money
+                    </button>
+                    <button id="btn-show-get-bonus"
+                        class="btn btn-lg flex flex-row items-center px-5 py-2 text-sm gap-0.5 font-normal">
+                        <i class="fa-solid fa-money-bills-simple"></i>
+                        Get Bonus
+                    </button>
+                    <button id="btn-show-pay-bill"
+                        class="btn btn-lg flex flex-col gap-0.5 items-center px-5 py-2 text-sm font-normal">
+                        <i class="fa-duotone fa-solid fa-envelope-open-dollar size-6"></i>
+                        Pay Bill
+                    </button>
+                    <button id="btn-show-transaction"
+                        class="btn btn-lg flex flex-col gap-1 items-center px-5 py-2 text-sm font-normal">
+                        <i class="fa-solid fa-money-simple-from-bracket"></i>
+                        Transactions
+                    </button>
                 </div>
 
-
-
-                <div class="divider"></div>
+                <!-- <div class="divider"></div> -->
                 <!-- Add Money Form -->
-                <div id="add-money-form" class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl ">
+                <div id="add-money-form" class="card bg-base-100 w-full ">
                     <form class="card-body">
                         <div class="form-control">
                             <label class="label">
                                 <span class="label-text">Amount</span>
                             </label>
-                            <input id="input-add-money" type="text" placeholder="Amount" class="input input-bordered"
-                                required />
+                            <input id="input-add-money" type="text" placeholder="Amount"
+                                class="input input-bordered rounded-full bg-[#F4F5F7]" required />
                         </div>
                         <div class="form-control">
                             <label class="label">
                                 <span class="label-text">Pin</span>
                             </label>
                             <input id="input-pin-number" type="password" placeholder="Pin Number"
-                                class="input input-bordered" autocomplete="off" required />
+                                class="input input-bordered rounded-full bg-[#F4F5F7]" autocomplete="off" required />
                         </div>
                         <div class="form-control mt-6">
                             <button id="btn-add-money" class="btn btn-primary">Add Money</button>
@@ -78,24 +122,102 @@
                 </div>
 
                 <!-- Cash Out Start -->
-                <div id="cash-out-form" class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl hidden">
+                <div id="cash-out-form" class="card bg-base-100 w-full hidden">
                     <form class="card-body">
                         <div class="form-control">
                             <label class="label">
                                 <span class="label-text">Amount</span>
                             </label>
-                            <input id="input-cash-out" type="text" placeholder="Amount" class="input input-bordered"
-                                required />
+                            <input id="input-cash-out" type="text" placeholder="Amount"
+                                class="input input-bordered rounded-full bg-[#F4F5F7]" required />
                         </div>
                         <div class="form-control">
                             <label class="label">
                                 <span class="label-text">Pin</span>
                             </label>
                             <input id="input-cash-out-pin" type="password" placeholder="Pin Number"
-                                class="input input-bordered" autocomplete="off" required />
+                                class="input input-bordered rounded-full bg-[#F4F5F7]" autocomplete="off" required />
                         </div>
                         <div class="form-control mt-6">
                             <button id="btn-cash-out" class="btn btn-primary">Cash Out</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Transfer Money -->
+                <div id="transfer-money-form" class="card bg-base-100 w-full hidden">
+                    <form class="card-body">
+                        <div class="form-control">
+                            <label class="label">
+                                <span class="label-text">Amount</span>
+                            </label>
+                            <input id="input-transfer-money" type="text" placeholder="Amount"
+                                class="input input-bordered rounded-full bg-[#F4F5F7]" required />
+                        </div>
+                        <div class="form-control">
+                            <label class="label">
+                                <span class="label-text">Pin</span>
+                            </label>
+                            <input id="input-transfer-pin" type="password" placeholder="Pin Number"
+                                class="input input-bordered rounded-full bg-[#F4F5F7]" autocomplete="off" required />
+                        </div>
+                        <div class="form-control mt-6">
+                            <button id="btn-transfer-money" class="btn btn-primary">Transfer Money</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Get Bonus -->
+                <div id="get-bonus-form" class="card bg-base-100 w-full hidden">
+                    <form class="card-body">
+                        <div class="form-control">
+                            <label class="label">
+                                <span class="label-text">Coupon Code</span>
+                            </label>
+                            <input id="couponCode" type="text" placeholder="Enter Bonus Coupon"
+                                class="input input-bordered rounded-full bg-[#F4F5F7]" required />
+                        </div>
+                        <div class="form-control mt-6">
+                            <button id="btn-get-bonus" class="btn btn-primary">Get Bonus</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Pay Bill -->
+                <div id="pay-bill-form" class="card bg-base-100 w-full hidden">
+                    <form class="card-body">
+                        <div class="form-control">
+                            <label class="label">
+                                <span class="label-text">Amount</span>
+                            </label>
+                            <input id="input-pay-bill-amount" type="text" placeholder="Amount"
+                                class="input input-bordered rounded-full bg-[#F4F5F7]" required />
+                        </div>
+                        <div class="form-control">
+                            <label class="label">
+                                <span class="label-text">Pin</span>
+                            </label>
+                            <input id="input-pay-bill-pin" type="password" placeholder="Pin Number"
+                                class="input input-bordered rounded-full bg-[#F4F5F7]" autocomplete="off" required />
+                        </div>
+                        <div class="form-control mt-6">
+                            <button id="btn-pay-bill" class="btn btn-primary">Pay Bill</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Transaction -->
+                <div id="transaction-form" class="card bg-base-100 w-full hidden">
+                    <form class="card-body">
+                        <div class="form-control">
+                            <label class="label">
+                                <span class="label-text">Pin</span>
+                            </label>
+                            <input id="input-transaction-pin" type="password" placeholder="Pin Number"
+                                class="input input-bordered rounded-full bg-[#F4F5F7]" autocomplete="off" required />
+                        </div>
+                        <div class="form-control mt-6">
+                            <button id="btn-transaction-history" class="btn btn-primary">View Transactions</button>
                         </div>
                     </form>
                 </div>
@@ -104,8 +226,9 @@
     </div>
 
     <script src="js/home.js"></script>
-    <script src="js/cashout.js"></script>
     <script src="js/features.js"></script>
+    <script src="js/cashout.js"></script>
+    <script src="js/coupon.js"></script>
 </body>
 
 </html>
