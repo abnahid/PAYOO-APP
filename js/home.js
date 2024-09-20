@@ -42,5 +42,5 @@ document
 
 // Log out functionality
 document.getElementById("log-out").addEventListener("click", function () {
-  window.location.href = "/login.html";
+  window.location.href = "./login.html";
 });

@@ -25,7 +25,7 @@ document
 
       // Navigate to the new page after a short delay
       setTimeout(function () {
-        window.location.href = "/home.html";
+        window.location.href = "./home.html";
       }, 1000);
     } else {
       console.log("Something wrong");
