@@ -44,13 +44,27 @@
                         </div>
 
                     </div>
-                    <div>
-                        <h1 id="log-out"
-                            class="  rounded-lg border-gray-300 px-2 h-fit p-1 btn-ghost cursor-pointer  flex gap-2">
-                            <span><i class="fa-solid fa-arrow-right-to-bracket rotate-180"></i></span>
-                            logout
-                        </h1>
+
+                    <div class="dropdown dropdown-end">
+                        <div tabindex="0" role="button" class="btn btn-ghost w-14 btn-circle avatar">
+                            <div class="ring-primary ring-offset-base-100 rounded-full ring ring-offset-2">
+                                <img
+                                    src="https://avatars.githubusercontent.com/u/96525656?s=400&u=e024961c6839c7bf8e17c1f24c8ff8a26feb6d04&v=4" />
+                            </div>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                            <li>
+                                <a class="justify-between">
+                                    Profile
+                                    <span class="badge">New</span>
+                                </a>
+                            </li>
+                            <li><a>Settings</a></li>
+                            <li id="log-out"><a>Logout</a></li>
+                        </ul>
                     </div>
+
 
                 </div>
 
@@ -206,23 +220,62 @@
                     </form>
                 </div>
 
-                <!-- Transaction -->
-                <div id="transaction-form" class="card bg-base-100 w-full hidden">
-                    <form class="card-body">
-                        <div class="form-control">
-                            <label class="label">
-                                <span class="label-text">Pin</span>
-                            </label>
-                            <input id="input-transaction-pin" type="password" placeholder="Pin Number"
-                                class="input input-bordered rounded-full bg-[#F4F5F7]" autocomplete="off" required />
+
+                <!-- Transaction History Header -->
+                <div id="transfer-money-form" class="w-11/12 ml-4">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-lg font-bold">Transaction History</h3>
+                        <a href="#" class="text-blue-500">View All</a>
+                    </div>
+
+                    <!-- Transactions List -->
+                    <div class="mt-5 space-y-4">
+                        <!-- Transaction Item 2 -->
+                        <div class="flex items-center justify-between bg-gray-50 p-4 rounded-lg shadow-sm">
+                            <div class="flex items-center">
+                                <i class="fa-duotone fa-solid fa-building-columns text-3xl"></i>
+                                <div class="ml-4">
+                                    <p class="font-bold">Bank Deposit</p>
+                                    <p class="text-sm text-gray-500">Today 01:44 AM</p>
+                                </div>
+                            </div>
+                            <div class="dropdown dropdown-end">
+                                <label tabindex="0" class="btn btn-ghost btn-circle">
+                                    <i class="fa-regular fa-ellipsis-vertical"></i>
+                                </label>
+                                <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+                                    <li><a href="#">Details</a></li>
+                                    <li><a href="#">Delete</a></li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="form-control mt-6">
-                            <button id="btn-transaction-history" class="btn btn-primary">View Transactions</button>
+
+                        <!-- Transaction Item 3 -->
+                        <div class="flex items-center justify-between bg-gray-50 p-4 rounded-lg shadow-sm">
+                            <div class="flex items-center">
+                                <i class="fa-solid fa-comment-sms text-3xl"></i>
+                                <div class="ml-4">
+                                    <p class="font-bold">Mobile Recharge</p>
+                                    <p class="text-sm text-gray-500">Today 01:44 AM</p>
+                                </div>
+                            </div>
+                            <div class="dropdown dropdown-end">
+                                <label tabindex="0" class="btn btn-ghost btn-circle">
+                                    <i class="fa-regular fa-ellipsis-vertical"></i>
+                                </label>
+                                <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+                                    <li><a href="#">Details</a></li>
+                                    <li><a href="#">Delete</a></li>
+                                </ul>
+                            </div>
                         </div>
-                    </form>
+
+                    </div>
                 </div>
             </div>
+
         </div>
+    </div>
     </div>
 
     <script src="js/home.js"></script>

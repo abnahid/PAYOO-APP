@@ -16,7 +16,17 @@ document
 
     // bad Way To Find valid Data
     if (phoneNumber === "235689" && pinNumber === "1234") {
-      window.location.href = "/home.html";
+      // window.location.href = "/home.html";
+
+      const spinner = document.getElementById("loading-spinner");
+      spinner.classList.remove("hidden");
+      document.getElementById("logo").classList.add("hidden");
+      document.getElementById("hero").classList.add("hidden");
+
+      // Navigate to the new page after a short delay
+      setTimeout(function () {
+        window.location.href = "/home.html";
+      }, 1000);
     } else {
       console.log("Something wrong");
     }

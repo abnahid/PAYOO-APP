@@ -1,10 +1,9 @@
-// Step-1: Add an event handler to the "Add Money" button inside the form
 document
   .getElementById("btn-cash-out")
   .addEventListener("click", function (event) {
     event.preventDefault();
 
-    // Step-2: Retrieve Add Money & Pin Number Input
+    // Step-2: Retrieve Cash Out & Pin Number Input
     const cashOutInput = document.getElementById("input-cash-out").value;
     const cashOutPinInput = document.getElementById("input-cash-out-pin").value;
 
@@ -15,6 +14,10 @@ document
 
       const balanceNumber = parseFloat(balance);
       const cashOutNumber = parseFloat(cashOutInput);
+
+      if (cashOutNumber > balanceNumber) {
+        alert("You do not have sufficient balance");
+      }
 
       // Check if both balance and input are valid numbers
       if (!isNaN(balanceNumber) && !isNaN(cashOutNumber)) {
